@@ -12,20 +12,23 @@ def selection_sort(arr):
     return arr
 
 
-test = [0, 5, 7, 4, 1]
 # TO-DO:  implement the Bubble Sort function below
-
-# print(len(test))
-
-for i in range(len(test) - 2):
-    # test[i + 1]
-    current_index = i
-    if test[i] > test[i + 1]:
-        print(i)
-    # print(i)
-
+def bubble_sort(arr):
+    for i in range(len(arr) - 1):
+        stop_iteration = 0
+        for k in range(len(arr) - 1):
+            curr_index = k
+            if arr[curr_index] > arr[curr_index + 1]:
+                arr[curr_index], arr[curr_index +
+                                     1] = arr[curr_index + 1], arr[curr_index]
+                stop_iteration = 1
+        if stop_iteration == 0:
+            break
+    return arr
 
 # STRETCH: implement the Count Sort function below
+
+
 def count_sort(arr, maximum=-1):
 
     return arr
