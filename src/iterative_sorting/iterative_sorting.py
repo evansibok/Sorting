@@ -14,10 +14,10 @@ def selection_sort(arr):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
-    for i in range(len(arr) - 1):
+    for i in range(len(arr)):
         stop_iteration = 0
-        for k in range(len(arr) - 1):
-            curr_index = k
+        for j in range(len(arr) - i - 1):
+            curr_index = j
             if arr[curr_index] > arr[curr_index + 1]:
                 arr[curr_index], arr[curr_index +
                                      1] = arr[curr_index + 1], arr[curr_index]
